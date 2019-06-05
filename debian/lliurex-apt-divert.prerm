@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+ORIG_FILE="/usr/bin/apt"
+case $1 in 
+	remove|purge|abort-install|disappear)
+		if [ -f ${ORIG_FILE}.real ]
+		then
+			dpkg-divert --package lliurex-apt-divert --rename --quiet --remove ${ORIG_FILE} || true
+		fi;;
+esac
+
+#DEBHELPER#

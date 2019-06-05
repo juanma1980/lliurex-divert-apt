@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+ORIG_FILE=/usr/bin/apt
+case $1 in
+
+	configure)
+		dpkg-divert --package lliurex-apt-divert --add --rename --divert /usr/bin/apt ${ORIG_FILE}.real ${ORIG_FILE}
+		;;
+
+esac
+
+#DEBHELPER#
