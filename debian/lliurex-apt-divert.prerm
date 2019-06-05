@@ -1,11 +1,16 @@
 #!/bin/sh
 set -e
-ORIG_FILE="/usr/bin/apt"
+APT=/usr/sbin/apt
+APTGET=/usr/sbin/apt-get
+APTOVERLAY=/usr/sbin/apt-overlay
 case $1 in 
 	remove|purge|abort-install|disappear)
 		if [ -f ${ORIG_FILE}.real ]
 		then
-			dpkg-divert --package lliurex-apt-divert --rename --quiet --remove ${ORIG_FILE} || true
+			for i in $APT $APTGET $APTOVERLAY
+			do
+				dpkg-divert --package lliurex-apt-divert --rename --quiet --remove ${i} || true
+			done
 		fi;;
 esac
 

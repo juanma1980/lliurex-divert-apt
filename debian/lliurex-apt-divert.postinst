@@ -1,10 +1,15 @@
 #!/bin/sh
 set -e
-ORIG_FILE=/usr/bin/apt
+APT=/usr/sbin/apt
+APTGET=/usr/sbin/apt-get
+APTOVERLAY=/usr/sbin/apt-overlay
 case $1 in
 
 	configure)
-		dpkg-divert --package lliurex-apt-divert --add --rename --divert /usr/bin/apt ${ORIG_FILE}.real ${ORIG_FILE}
+		for i in $APT $APTGET $APTOVERLAY
+		do
+			dpkg-divert --package lliurex-apt-divert --add --rename --divert $i ${i}.neon ${i}
+		done
 		;;
 
 esac
