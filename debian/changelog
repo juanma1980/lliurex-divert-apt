@@ -1,4 +1,4 @@
-lliurex-apt.divert (0.1) bionic; urgency=medium
+lliurex-apt-divert (0.1) bionic; urgency=medium
 
   * Diverts custom apt from neon
 
