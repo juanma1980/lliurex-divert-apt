@@ -8,7 +8,7 @@ case $1 in
 	configure)
 		for i in $APT $APTGET $APTOVERLAY
 		do
-			dpkg-divert --package lliurex-apt-divert --add --rename --divert $i ${i}.neon ${i}
+			dpkg-divert --package lliurex-apt-divert --add --rename --divert ${i}.neon ${i}
 		done
 		;;
 
