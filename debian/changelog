@@ -1,3 +1,9 @@
+lliurex-apt-divert (0.2) focal; urgency=medium
+
+  * Focal release
+
+ -- Juanma1980 <juanma1980@gmail.com>  Wed, 28 Apr 2021 10:13:12 +0200
+
 lliurex-apt-divert (0.1) bionic; urgency=medium
 
   * Diverts custom apt from neon
