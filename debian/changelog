@@ -1,3 +1,9 @@
+lliurex-apt-divert (0.2lliurex25) noble; urgency=medium
+
+  * Noble release
+
+ -- Juanma1980 <juanma1980@gmail.com>  Tue, 03 Sep 2024 11:46:09 +0200
+
 lliurex-apt-divert (0.2lliurex23) jammy; urgency=medium
 
   * Jammy release
